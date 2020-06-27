@@ -32,5 +32,13 @@ void showArray(int arr[], int size)
 }
 
 int main(){
-  
+  	int arr[] = {5, 1, 12, -5, 16, 2, 12, 14};
+	int n = sizeof(arr)/sizeof(arr[0]); 
+	cout<<"Sebelum diurutkan :"<<endl;
+	showArray(arr,n);
+	cout<<endl;
+	selectionSort(arr, n);
+	cout<<"Setelah dilakukan selection sort: "<<endl;
+	showArray(arr, n); 
+	return 0;
 }
