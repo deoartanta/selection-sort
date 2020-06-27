@@ -23,6 +23,14 @@ void selectionSort(int arr[], int n)
     } 
 }
 
+void showArray(int arr[], int size) 
+{ 
+    int i; 
+    for (i=0; i < size; i++)
+	cout<<arr[i]<<", ";
+	cout<<endl;
+}
+
 int main(){
   
 }
