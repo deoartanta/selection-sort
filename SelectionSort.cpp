@@ -20,22 +20,23 @@ void showArray(int arr[], int size)
 
 void selectionSort(int arr[], int n) 
 { 
-    int i, j, min_idx; 
+    int i, j, min_idx,no=0; 
     for (i = 0; i < n-1; i++) 
     { 
         min_idx = i;
         for (j = i+1; j < n; j++)
           if (arr[j] < arr[min_idx]){
-	          cout<<"Iterasi ke "<<i+1<<" : "<<endl;
-	          showArray(arr, n);
-	            min_idx = j; 
-	        swap(arr[min_idx], arr[i]); 
+	          min_idx = j; 
 		  }
+          	no++;
+	        swap(arr[min_idx], arr[i]);
+	        cout<<"Iterasi ke "<<no<<" : "<<endl;
+	        showArray(arr, n);
     } 
 }
 
 int main(){
-  	int arr[] = {5, 1, 12, 2, 12};
+  	int arr[] = {30, 50, 20, 10, 40};
 	int n = sizeof(arr)/sizeof(arr[0]);
 	cout<<"PENGURUTAN DENGAN SELECTION SORT"<<endl;
     cout<<"================================"<<endl; 
