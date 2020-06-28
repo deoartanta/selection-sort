@@ -23,12 +23,19 @@ void selectionSort(int arr[], int n)
     } 
 }
 
-void showArray(int arr[], int size) 
+void showArray(int arr[], int size, bool iterasi = false)
 { 
-    int i; 
-    for (i=0; i < size; i++)
-	cout<<arr[i]<<", ";
-	cout<<endl;
+    int i;
+    if(iterasi){
+	    cout<<"Iterasi ke "<<i<<" : "<<endl;
+	    for (i=0; i < size; i++)
+		cout<<arr[i]<<", ";
+		cout<<endl;
+	}else{
+		for (i=0; i < size; i++)
+		cout<<arr[i]<<", ";
+		cout<<endl;
+	}
 }
 
 int main(){
@@ -41,6 +48,6 @@ int main(){
 	cout<<endl;
 	selectionSort(arr, n);
 	cout<<"Setelah dilakukan selection sort: "<<endl;
-	showArray(arr, n); 
+	showArray(arr, n,true); 
 	return 0;
 }
