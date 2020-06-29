@@ -24,13 +24,14 @@ void selectionSort(int arr[], int n)
     for (i = 0; i < n-1; i++) 
     { 
         min_idx = i;
-        for (j = i+1; j < n; j++)
-          if (arr[j] < arr[min_idx]){
+        for (j = i+1; j < n; j++){
+          if (arr[j] > arr[min_idx]){
 	          min_idx = j; 
 		  }
+		}
           	no++;
 	        swap(arr[min_idx], arr[i]);
-	        cout<<"Iterasi ke "<<no<<" : "<<endl;
+	        cout<<"Iterasi ke "<<no<<" : ";
 	        showArray(arr, n);
     } 
 }
@@ -40,11 +41,11 @@ int main(){
 	int n = sizeof(arr)/sizeof(arr[0]);
 	cout<<"PENGURUTAN DENGAN SELECTION SORT"<<endl;
     cout<<"================================"<<endl; 
-	cout<<"Sebelum diurutkan :"<<endl;
+	cout<<"Sebelum diurutkan : ";
 	showArray(arr,n);
 	cout<<endl;
 	selectionSort(arr, n);
-	cout<<"Setelah dilakukan selection sort: "<<endl;
+	cout<<"\nSetelah dilakukan selection sort: ";
 	showArray(arr, n); 
 	return 0;
 }
